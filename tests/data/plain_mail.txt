@@ -1,0 +1,18 @@
+MIME-Version: 1.0
+Received: by 10.216.73.137 with HTTP; Mon, 13 Jan 2014 00:46:29 -0800 (PST)
+Date: Mon, 13 Jan 2014 17:46:29 +0900
+Delivered-To: g.test.address@gmail.com
+Message-ID: <CAD06Mfjz=M7TEaKsKuvtn21bn=VvP+hH1Gd1_hT6R8UCnRa_kw@mail.gmail.com>
+Subject: =?ISO-2022-JP?B?GyRCJVclbCE8JXMlRiUtJTklSCVhITwlazdvTD4bKEI=?=
+From: =?ISO-2022-JP?B?GyRCJUYlOSVIJUYlOSVIGyhC?= <g.test.address@gmail.com>
+To: =?ISO-2022-JP?B?GyRCJUYlOSVIJUYlOSVIGyhC?= <g.test.address@gmail.com>
+Content-Type: text/plain; charset=ISO-2022-JP
+Content-Transfer-Encoding: 7bit
+
+プレーンテキストメール本文1
+プレーンテキストメール本文2
+プレーンテキストメール本文3
+
+プレーンテキストメール本文4
+プレーンテキストメール本文5
+プレーンテキストメール本文6

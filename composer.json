@@ -1,0 +1,32 @@
+{
+    "name": "ackintosh/maildecoder",
+    "description": "",
+    "keywords": ["mail"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/ackintosh/maildecoder",
+    "authors": [
+        {
+        "name": "Akihito Nakano",
+        "email": "sora.akatsuki@gmail.com"
+    }
+    ],
+    "repositories": [
+        {
+        "type": "pear",
+        "url": "http://pear.php.net/"
+    }
+    ],
+    "require": {
+        "php": ">=5.2.0",
+        "pear-pear.php.net/Mail_mimeDecode": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "MailDecoder": "source/"
+        }
+    }
+}
