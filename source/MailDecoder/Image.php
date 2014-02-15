@@ -33,7 +33,20 @@ class MailDecoder_Image
     {
         $this->properties['ext'] = $this->data->ctype_secondary;
         $this->properties['name'] = $this->data->ctype_parameters['name'];
-        $this->properties['attachment_id'] = $this->data->headers['x-attachment-id'];
+        $this->properties['disposition'] = $this->getDisposition();
+        $this->properties['attachment_id'] = $this->getAttachmentId();
+    }
+
+    private function getAttachmentId()
+    {
+        if (isset($this->data->headers['x-attachment-id'])) return $this->data->headers['x-attachment-id'];
+        return substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 10);
+    }
+
+    private function getDisposition()
+    {
+        if (isset($this->data->disposition)) return $this->data->disposition;
+        return;
     }
 
     /**

@@ -22,6 +22,9 @@ class MailDecoder_Factory
         $structure = $mimeDecode->decode($params);
         switch (strtolower($structure->ctype_primary)) {
             case 'multipart':
+                if (strpos($structure->ctype_parameters['boundary'], 'Apple-Mail') === 0) {
+                    return new MailDecoder_MultipartIphone($structure);
+                }
                 return new MailDecoder_Multipart($structure);
                 break;
             default:
