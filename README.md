@@ -4,6 +4,7 @@ Library for HTML mail decoding.
 
 [![Build
 Status](https://travis-ci.org/ackintosh/maildecoder.png?branch=master)](https://travis-ci.org/ackintosh/maildecoder)
+[![Coverage Status](https://coveralls.io/repos/ackintosh/maildecoder/badge.png?branch=master)](https://coveralls.io/r/ackintosh/maildecoder?branch=master)
 
 ## Usage
 
