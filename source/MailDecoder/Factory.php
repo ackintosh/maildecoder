@@ -20,6 +20,7 @@ class MailDecoder_Factory
         $params['input'] = $input;
         $mimeDecode = new Mail_mimeDecode($params['input']);
         $structure = $mimeDecode->decode($params);
+
         switch (strtolower($structure->ctype_primary)) {
             case 'multipart':
                 if (strpos($structure->ctype_parameters['boundary'], 'Apple-Mail') === 0) {
