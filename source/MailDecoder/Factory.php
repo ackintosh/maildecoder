@@ -1,4 +1,6 @@
 <?php
+require dirname(__FILE__) . '/Exception/InvalidMailData.php';
+
 class MailDecoder_Factory
 {
     private function __construct() {
@@ -20,6 +22,11 @@ class MailDecoder_Factory
         $params['input'] = $input;
         $mimeDecode = new Mail_mimeDecode($params['input']);
         $structure = $mimeDecode->decode($params);
+
+        $pear = new PEAR;
+        if ($pear->isError($structure)) {
+            throw new MailDecoder_Exception_InvalidData($structure->getMessage(), $structure->getCode());
+        }
 
         switch (strtolower($structure->ctype_primary)) {
             case 'multipart':

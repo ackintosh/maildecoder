@@ -7,6 +7,7 @@ class MailDecoder_FactoryTest extends PHPUnit_Framework_TestCase
         $this->input_htmlmail = file_get_contents($test_dir . '/data/html_mail.txt');
         $this->input_htmlIphonemail = file_get_contents($test_dir . '/data/html_iphone_mail.txt');
         $this->input_plainmail = file_get_contents($test_dir . '/data/plain_mail.txt');
+        $this->input_invalidmail = file_get_contents($test_dir . '/data/invalid_mail.txt');
     }
 
     /**
@@ -34,5 +35,14 @@ class MailDecoder_FactoryTest extends PHPUnit_Framework_TestCase
     {
         $mail = MailDecoder_Factory::decode($this->input_plainmail);
         $this->assertSame('MailDecoder_Plain', get_class($mail));
+    }
+
+    /**
+     * @test
+     * @expectedException RuntimeException
+     */
+    public function decodeThrowsExceptionWhenPassedInvalidData()
+    {
+        $mail = MailDecoder_Factory::decode($this->input_invalidmail);
     }
 }
