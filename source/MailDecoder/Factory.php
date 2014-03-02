@@ -30,7 +30,7 @@ class MailDecoder_Factory
 
         switch (strtolower($structure->ctype_primary)) {
             case 'multipart':
-                if (strpos($structure->ctype_parameters['boundary'], 'Apple-Mail') === 0) {
+                if (isset($structure->headers['x-mailer']) && strpos($structure->headers['x-mailer'], 'iPhone Mail') === 0) {
                     return new MailDecoder_MultipartIphone($structure);
                 }
                 return new MailDecoder_Multipart($structure);
